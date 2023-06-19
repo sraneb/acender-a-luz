@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Acender e Apagar a Luz</title>
+  <style>
+    #lightbulb {
+      width: 100px;
+      height: 100px;
+      background-color: rgb(7, 7, 7);
+      border-radius: 50%;
+    }
+  </style>
+</head>
+<body>
+  <h1>Acender e Apagar a Luz</h1>
+  <div id="lightbulb"></div>
+  <button id="toggleButton">Acenda </button>
+
+  <script>
+    var lightbulb = document.getElementById('lightbulb');
+    var toggleButton = document.getElementById('toggleButton');
+    var isOn = false;
+
+    toggleButton.addEventListener('click', function() {
+      if (isOn) {
+        lightbulb.style.backgroundColor = 'black';
+        isOn = false;
+      } else {
+        lightbulb.style.backgroundColor = 'yellow';
+        isOn = true;
+      }
+    });
+  </script>
+</body>
+</html>
